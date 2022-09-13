@@ -1,0 +1,11 @@
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\bin\Debug\Browser.exe.config
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\bin\Debug\Browser.exe
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\bin\Debug\Browser.pdb
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.csproj.AssemblyReference.cache
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.csproj.SuggestedBindingRedirects.cache
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.Browser.resources
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.cache
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.csproj.CoreCompileInputs.cache
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.exe
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.pdb
