@@ -71,15 +71,32 @@ namespace Browser
         }
         private void TSB_Refresh_Click(object sender, EventArgs e)
         {
-            if (!webBrowser1.Url.Equals("about:blank"))
+            StreamReader sr = new StreamReader(@"C:\Browser\adres.txt");
+            List<string> adress = new List<string>();
+            for (int i = 0; i < Datanumber()-1 ; i++)
             {
-                webBrowser1.Refresh();
+                adress.Add(sr.ReadLine());
             }
+            sr.Close();
+            webBrowser1.Url = new Uri(adress[adress.Count-1]);
+            //if (!webBrowser1.Url.Equals("about:blank"))
+            //{
+            //    webBrowser1.Refresh();
+            //}
         }
 
         private void TSB_Back_Click(object sender, EventArgs e)
         {
-            webBrowser1.GoBack();
+
+            StreamReader sr = new StreamReader(@"C:\Browser\adres.txt");
+            List<string> adress = new List<string>();
+            for (int i = 0; i < Datanumber() - 1; i++)
+            {
+                adress.Add(sr.ReadLine());
+            }
+            sr.Close();
+            webBrowser1.Url = new Uri(adress[adress.Count - 2]);
+            //webBrowser1.GoBack();
         }
 
         private void TSB_Forward_Click(object sender, EventArgs e)
