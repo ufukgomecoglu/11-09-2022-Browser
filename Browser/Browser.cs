@@ -29,7 +29,9 @@ namespace Browser
             {
                 if (TSTB_Adres.Text.Length != 0)
                 {
-                    webBrowser1.Url = new Uri($"http://www.{TSTB_Adres.Text}.com");
+                    string adres = $"http://www.{TSTB_Adres.Text}.com";
+                    webBrowser1.Url = new Uri(adres);
+                    Kaydet(adres);
                 }
             }
             //if (e.KeyCode == Keys.Enter)
@@ -40,7 +42,33 @@ namespace Browser
             //    }
             //}
         }
-
+        private int Datanumber()
+        {
+            StreamReader sr = new StreamReader(@"C:\Browser\adres.txt");
+            string text = sr.ReadToEnd();
+            string[] lines = text.Split('\n');
+            int linesNumber = lines.Length;
+            sr.Close();
+            return linesNumber;
+        }
+        private void Kaydet(string adres)
+        {
+            StreamReader sr = new StreamReader(@"C:\Browser\adres.txt");
+            List<string> adress = new List<string>();
+            for (int i = 0; i < Datanumber()-1; i++)
+            {
+                adress.Add(sr.ReadLine());
+            }
+            sr.Close();
+            StreamWriter sw = new StreamWriter(@"C:\Browser\adres.txt");
+            for (int i = 0; i < adress.Count; i++)
+            {
+                sw.WriteLine(adress[i]);
+            }
+            sw.WriteLine(adres);
+            sw.Close();
+            adress.Clear();
+        }
         private void TSB_Refresh_Click(object sender, EventArgs e)
         {
             if (!webBrowser1.Url.Equals("about:blank"))
@@ -66,6 +94,12 @@ namespace Browser
             {
                 di.Create();
             }
+            FileInfo fi = new FileInfo(@"C:\Browser\adres.txt");
+            if (!fi.Exists)
+            {
+                fi.Create();
+            }
+            
         }
     }
 }
