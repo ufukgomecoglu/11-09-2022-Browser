@@ -13,6 +13,7 @@ namespace Browser
 {
     public partial class Browser : Form
     {
+        public static string WebAdres = "";
         public Browser()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace Browser
                 {
                     string adres = $"http://www.{TSTB_Adres.Text}.com";
                     webBrowser1.Url = new Uri(adres);
+                    WebAdres = adres;
                     Kaydet(adres);
                 }
             }
@@ -73,12 +75,15 @@ namespace Browser
         {
             StreamReader sr = new StreamReader(@"C:\Browser\adres.txt");
             List<string> adress = new List<string>();
-            for (int i = 0; i < Datanumber()-1 ; i++)
+            int number = Datanumber();
+            for (int i = 0; i < number-1 ; i++)
             {
                 adress.Add(sr.ReadLine());
             }
             sr.Close();
+
             webBrowser1.Url = new Uri(adress[adress.Count-1]);
+            
             //if (!webBrowser1.Url.Equals("about:blank"))
             //{
             //    webBrowser1.Refresh();
