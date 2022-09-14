@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +61,11 @@ namespace Browser
 
         private void Browser_Load(object sender, EventArgs e)
         {
-
+            DirectoryInfo di = new DirectoryInfo(@"C:\Browser");
+            if (!di.Exists)
+            {
+                di.Create();
+            }
         }
     }
 }
