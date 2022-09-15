@@ -80,7 +80,15 @@ namespace Browser
                 adress.Add(sr.ReadLine());
             }
             sr.Close();
-            webBrowser1.Url = new Uri(adress[adress.Count-1]);
+            webBrowser1.Url = new Uri(adress[adress.Count-1+WebAdres]);
+            if (adress.Count - 1 + WebAdres>Datanumber()-2 || adress.Count - 1 + WebAdres<0)
+            {
+                webBrowser1.Url = new Uri(adress[adress.Count - 1 ]);
+            }
+            else
+            {
+                webBrowser1.Url = new Uri(adress[adress.Count - 1 + WebAdres]);
+            }
             
             //if (!webBrowser1.Url.Equals("about:blank"))
             //{
@@ -146,6 +154,11 @@ namespace Browser
                 fi.Create();
             }
             
+        }
+
+        private void TSMI_Gecmis_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

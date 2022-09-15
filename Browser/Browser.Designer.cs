@@ -39,6 +39,9 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.TSDDB_Profil = new System.Windows.Forms.ToolStripDropDownButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.TSMI_Gecmis = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.TSMI_Cikis = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -110,6 +113,10 @@
             // 
             this.toolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSMI_Gecmis,
+            this.toolStripSeparator1,
+            this.TSMI_Cikis});
             this.toolStripDropDownButton1.Image = global::Browser.Properties.Resources.vertical_dots;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -145,6 +152,24 @@
             this.webBrowser1.Size = new System.Drawing.Size(800, 403);
             this.webBrowser1.TabIndex = 2;
             // 
+            // TSMI_Gecmis
+            // 
+            this.TSMI_Gecmis.Name = "TSMI_Gecmis";
+            this.TSMI_Gecmis.Size = new System.Drawing.Size(180, 22);
+            this.TSMI_Gecmis.Text = "Geçmiş Göster";
+            this.TSMI_Gecmis.Click += new System.EventHandler(this.TSMI_Gecmis_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // TSMI_Cikis
+            // 
+            this.TSMI_Cikis.Name = "TSMI_Cikis";
+            this.TSMI_Cikis.Size = new System.Drawing.Size(180, 22);
+            this.TSMI_Cikis.Text = "Çıkış";
+            // 
             // Browser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,5 +202,8 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripDropDownButton TSDDB_Profil;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_Gecmis;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem TSMI_Cikis;
     }
 }
