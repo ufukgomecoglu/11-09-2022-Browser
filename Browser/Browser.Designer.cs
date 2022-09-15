@@ -100,9 +100,11 @@
             // 
             // TSTB_Adres
             // 
+            this.TSTB_Adres.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TSTB_Adres.Margin = new System.Windows.Forms.Padding(5, 0, 1, 0);
             this.TSTB_Adres.Name = "TSTB_Adres";
             this.TSTB_Adres.Size = new System.Drawing.Size(550, 25);
+            this.TSTB_Adres.Text = "face";
             this.TSTB_Adres.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TSTB_Adres_KeyDown);
             // 
             // toolStripDropDownButton1
