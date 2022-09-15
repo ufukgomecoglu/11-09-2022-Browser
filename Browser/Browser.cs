@@ -156,8 +156,11 @@ namespace Browser
 
         private void TSMI_Gecmis_Click(object sender, EventArgs e)
         {
-            Gecmis frm = new Gecmis();
-            frm.Show();
+            Gecmis gecmis = new Gecmis();
+            if (Application.OpenForms.OfType<Gecmis>().Count()==0)
+            {
+                gecmis.Show();
+            }
         }
 
         private void TSMI_Cikis_Click(object sender, EventArgs e)
