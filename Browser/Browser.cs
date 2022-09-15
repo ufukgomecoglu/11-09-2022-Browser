@@ -56,7 +56,7 @@ namespace Browser
         {
             StreamReader sr = new StreamReader(@"C:\Browser\adres.txt");
             List<string> adress = new List<string>();
-            for (int i = 0; i < Datanumber()-1; i++)
+            for (int i = 0; i < Datanumber() - 1; i++)
             {
                 adress.Add(sr.ReadLine());
             }
@@ -68,28 +68,26 @@ namespace Browser
             }
             sw.WriteLine(adres);
             sw.Close();
-            adress.Clear();
         }
         private void TSB_Refresh_Click(object sender, EventArgs e)
         {
             StreamReader sr = new StreamReader(@"C:\Browser\adres.txt");
             List<string> adress = new List<string>();
             int number = Datanumber();
-            for (int i = 0; i < number-1 ; i++)
+            for (int i = 0; i < number - 1; i++)
             {
                 adress.Add(sr.ReadLine());
             }
             sr.Close();
-            webBrowser1.Url = new Uri(adress[adress.Count-1+WebAdres]);
-            if (adress.Count - 1 + WebAdres>Datanumber()-2 || adress.Count - 1 + WebAdres<0)
+            if (adress.Count - 1 + WebAdres > Datanumber() - 2 || adress.Count - 1 + WebAdres < 0)
             {
-                webBrowser1.Url = new Uri(adress[adress.Count - 1 ]);
+                webBrowser1.Url = new Uri(adress[adress.Count - 1]);
             }
             else
             {
                 webBrowser1.Url = new Uri(adress[adress.Count - 1 + WebAdres]);
             }
-            
+
             //if (!webBrowser1.Url.Equals("about:blank"))
             //{
             //    webBrowser1.Refresh();
@@ -108,7 +106,7 @@ namespace Browser
             }
             sr.Close();
             WebAdres = WebAdres - 1;
-            if (adress.Count - 1 + WebAdres<0)
+            if (adress.Count - 1 + WebAdres < 0)
             {
                 webBrowser1.Url = new Uri("http://www.google.com");
             }
@@ -130,7 +128,7 @@ namespace Browser
             }
             sr.Close();
             WebAdres = WebAdres + 1;
-            if (adress.Count - 1 + WebAdres > Datanumber()-2)
+            if (adress.Count - 1 + WebAdres > Datanumber() - 2)
             {
                 webBrowser1.Url = new Uri("http://www.google.com");
             }
@@ -153,12 +151,23 @@ namespace Browser
             {
                 fi.Create();
             }
-            
+
         }
 
         private void TSMI_Gecmis_Click(object sender, EventArgs e)
         {
+            
+            Gecmis frm = new Gecmis();
+            
+            
+                frm.Show();
+            
+            
+        }
 
+        private void TSMI_Cikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

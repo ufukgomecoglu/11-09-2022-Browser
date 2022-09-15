@@ -9,3 +9,4 @@ C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Bro
 C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.csproj.CoreCompileInputs.cache
 C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.exe
 C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.pdb
+C:\Users\asus\OneDrive\Documents\GitHub\11-09-2022-Browser\Browser\obj\Debug\Browser.Gecmis.resources
