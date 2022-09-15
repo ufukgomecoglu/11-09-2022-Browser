@@ -122,7 +122,7 @@ namespace Browser
             }
             sr.Close();
             WebAdres = WebAdres + 1;
-            if (adress.Count - 1 + WebAdres > Datanumber()-1)
+            if (adress.Count - 1 + WebAdres > Datanumber()-2)
             {
                 webBrowser1.Url = new Uri("http://www.google.com");
             }
@@ -130,7 +130,7 @@ namespace Browser
             {
                 webBrowser1.Url = new Uri(adress[adress.Count - 1 + WebAdres]);
             }
-            webBrowser1.GoForward();
+            //webBrowser1.GoForward();
         }
 
         private void Browser_Load(object sender, EventArgs e)
